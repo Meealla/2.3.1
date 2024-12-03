@@ -19,13 +19,13 @@ public class UsersController {
     }
 
     @GetMapping
-    public String getAllUser(Model model) {
+    public String getAllUsers(Model model) {
         model.addAttribute("users", userService.getAllUser());
         return "allUser";
     }
 
     @GetMapping("/new")
-    public String newUser(@ModelAttribute("user") User user) {
+    public String createUserForm(@ModelAttribute("user") User user) {
         return "new";
     }
 
