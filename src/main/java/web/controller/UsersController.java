@@ -11,7 +11,7 @@ import web.service.UserService;
 @RequestMapping("/user")
 public class UsersController {
 
-    UserService userService;
+    private final UserService userService;
 
     @Autowired
     public UsersController(UserService userService) {
